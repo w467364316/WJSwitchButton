@@ -15,6 +15,7 @@
 		669BFC541D21418000A6EEA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 669BFC521D21418000A6EEA0 /* LaunchScreen.storyboard */; };
 		669BFC5F1D21418000A6EEA0 /* UISwitchDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 669BFC5E1D21418000A6EEA0 /* UISwitchDemoTests.m */; };
 		669BFC6A1D21418100A6EEA0 /* UISwitchDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 669BFC691D21418100A6EEA0 /* UISwitchDemoUITests.m */; };
+		669BFC791D21421900A6EEA0 /* WJSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 669BFC781D21421900A6EEA0 /* WJSwitchView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		669BFC651D21418100A6EEA0 /* UISwitchDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UISwitchDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		669BFC691D21418100A6EEA0 /* UISwitchDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UISwitchDemoUITests.m; sourceTree = "<group>"; };
 		669BFC6B1D21418100A6EEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		669BFC771D21421900A6EEA0 /* WJSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJSwitchView.h; sourceTree = "<group>"; };
+		669BFC781D21421900A6EEA0 /* WJSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJSwitchView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				669BFC481D21418000A6EEA0 /* AppDelegate.m */,
 				669BFC4A1D21418000A6EEA0 /* ViewController.h */,
 				669BFC4B1D21418000A6EEA0 /* ViewController.m */,
+				669BFC771D21421900A6EEA0 /* WJSwitchView.h */,
+				669BFC781D21421900A6EEA0 /* WJSwitchView.m */,
 				669BFC4D1D21418000A6EEA0 /* Main.storyboard */,
 				669BFC501D21418000A6EEA0 /* Assets.xcassets */,
 				669BFC521D21418000A6EEA0 /* LaunchScreen.storyboard */,
@@ -273,6 +278,7 @@
 				669BFC4C1D21418000A6EEA0 /* ViewController.m in Sources */,
 				669BFC491D21418000A6EEA0 /* AppDelegate.m in Sources */,
 				669BFC461D21418000A6EEA0 /* main.m in Sources */,
+				669BFC791D21421900A6EEA0 /* WJSwitchView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
