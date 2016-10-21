@@ -8,7 +8,6 @@
 
 #import "WJSwitchView.h"
 
-
 @interface WJSwitchView (){
 
     BOOL isOpen;//是否开启(右边为开启)
@@ -62,7 +61,7 @@
 
     
     UITouch * touch = [touches anyObject];
-    self.beginpoint = [touch locationInView:self].x;
+//    self.beginpoint = [touch locationInView:self].x;
     
     if (!isOpen) {
         [self switchOpen];
@@ -91,15 +90,16 @@
         [self.bgView setImage:[UIImage imageNamed:@"bgViewOn"]];
     });
     
-    CGFloat X = CGRectGetWidth(self.frame)/2;
+    CGFloat X = CGRectGetWidth(self.frame)/2 - 2;
     CGRect frame = self.btnView.frame;
     
-    
-    [UIView animateWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-         [self.btnView setFrame:CGRectMake(X, frame.origin.y, frame.size.width, frame.size.height)];
-    } completion:^(BOOL finished) {
-        
-    }];
+    /*创建弹性动画
+     damping:阻尼，范围0-1，阻尼越接近于0，弹性效果越明显
+     velocity:弹性复位的速度
+     */
+    [UIView animateWithDuration:0.2 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveLinear animations:^{
+        [self.btnView setFrame:CGRectMake(X, frame.origin.y, frame.size.width, frame.size.height)];
+    } completion:nil];
 }
 
 /**
@@ -115,11 +115,9 @@
     CGFloat X = 2;
     CGRect frame = self.btnView.frame;
     
-    [UIView animateWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:0.2 delay:0 usingSpringWithDamping:0.9 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveLinear animations:^{
          [self.btnView setFrame:CGRectMake(X, frame.origin.y, frame.size.width, frame.size.height)];
-    } completion:^(BOOL finished) {
-        
-    }];
+    } completion:nil];
 
     
 }
