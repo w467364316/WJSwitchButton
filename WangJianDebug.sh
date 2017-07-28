@@ -5,6 +5,9 @@ CODE_SIGN_DISTRIBUTION="iPhone Distribution: Wang Jian (4E2GFJ2AYE) Co., Ltd."
 # info.plist路径
 project_infoplist_path="./${APP_NAME}/Info.plist"
 
+# archieve路径
+archieve_path = "${WORKSPACE}/build}"
+
 #取版本号
 bundleShortVersion=$(/usr/libexec/PlistBuddy -c "print CFBundleShortVersionString" "${project_infoplist_path}")
 
@@ -33,7 +36,10 @@ xcodebuild -target "${APP_NAME}" -sdk iphoneos -configuration 'Release' CODE_SIG
 # echo "+++++++++++++++++build+++++++++++++++++"
 # xcodebuild -workspace "${APP_NAME}.xcworkspace" -scheme "${APP_NAME}" -sdk iphoneos -configuration 'Release' CODE_SIGN_IDENTITY="${CODE_SIGN_DISTRIBUTION}" SYMROOT='$(PWD)'
 
-xcrun -sdk iphoneos PackageApplication "./Release-iphoneos/${APP_NAME}.app" -o ~/"${IPANAME}"
+# xcrun -sdk iphoneos xcodebuild -exportArchive "./Release-iphoneos/${APP_NAME}.app" -o ~/"${IPANAME}"
+xcodebuild -exportArchive "./Release-iphoneos/${APP_NAME}.app" -archivePath ${archieve_path} -exportPath ${IPA_PATH}
+
+
 #
 # 作者：一缕殇流化隐半边冰霜
 # 链接：http://www.jianshu.com/p/41ecb06ae95f
